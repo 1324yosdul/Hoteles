@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container mt-5 col-md-5">
+
+    <h2 class="text-center mb-4">Reserva de Hotel</h2>
+
+    {% if ok %}
+    <div class="alert alert-success">{{ ok }}</div>
+    {% endif %}
+
+    <form method="POST">
+
+        <input type="email" name="email" placeholder="Correo con el que se registró" class="form-control mb-3" required>
+
+        <input type="text" name="reserva" placeholder="Nombre del hotel o tipo de habitación" class="form-control mb-3" required>
+
+        <button class="btn btn-primary w-100">Enviar Reserva</button>
+
+        <a href="/" class="btn btn-secondary w-100 mt-3">Volver al Inicio</a>
+
+    </form>
+</div>
+</body>
+</html>
